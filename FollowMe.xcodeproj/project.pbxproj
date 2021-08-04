@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		3A4497DB26BAA89A001CB1C9 /* FollowMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4497DA26BAA89A001CB1C9 /* FollowMeApp.swift */; };
-		3A4497DD26BAA89A001CB1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4497DC26BAA89A001CB1C9 /* ContentView.swift */; };
+		3A4497DD26BAA89A001CB1C9 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4497DC26BAA89A001CB1C9 /* MyMapView.swift */; };
 		3A4497DF26BAA8A2001CB1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4497DE26BAA8A2001CB1C9 /* Assets.xcassets */; };
 		3A4497E226BAA8A2001CB1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4497E126BAA8A2001CB1C9 /* Preview Assets.xcassets */; };
 		3A4497ED26BAA8A2001CB1C9 /* FollowMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4497EC26BAA8A2001CB1C9 /* FollowMeTests.swift */; };
 		3A4497F826BAA8A3001CB1C9 /* FollowMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4497F726BAA8A3001CB1C9 /* FollowMeUITests.swift */; };
+		3A44980826BAA969001CB1C9 /* MyMapViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44980726BAA969001CB1C9 /* MyMapViewViewModel.swift */; };
+		3A44980B26BAAB58001CB1C9 /* LocationProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44980A26BAAB58001CB1C9 /* LocationProviderType.swift */; };
+		3A44980D26BAAC8E001CB1C9 /* CoreLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44980C26BAAC8E001CB1C9 /* CoreLocationProvider.swift */; };
+		3A44981326BACA01001CB1C9 /* ApplicationSettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44981226BACA01001CB1C9 /* ApplicationSettingsProvider.swift */; };
+		3A44981526BACED6001CB1C9 /* MockLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44981426BACED6001CB1C9 /* MockLocationProvider.swift */; };
+		3A44981826BAD4E4001CB1C9 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44981726BAD4E4001CB1C9 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,7 @@
 /* Begin PBXFileReference section */
 		3A4497D726BAA89A001CB1C9 /* FollowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4497DA26BAA89A001CB1C9 /* FollowMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeApp.swift; sourceTree = "<group>"; };
-		3A4497DC26BAA89A001CB1C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A4497DC26BAA89A001CB1C9 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		3A4497DE26BAA8A2001CB1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4497E126BAA8A2001CB1C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A4497E326BAA8A2001CB1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +51,13 @@
 		3A4497F326BAA8A2001CB1C9 /* FollowMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FollowMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4497F726BAA8A3001CB1C9 /* FollowMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeUITests.swift; sourceTree = "<group>"; };
 		3A4497F926BAA8A3001CB1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A44980726BAA969001CB1C9 /* MyMapViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapViewViewModel.swift; sourceTree = "<group>"; };
+		3A44980A26BAAB58001CB1C9 /* LocationProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProviderType.swift; sourceTree = "<group>"; };
+		3A44980C26BAAC8E001CB1C9 /* CoreLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationProvider.swift; sourceTree = "<group>"; };
+		3A44981226BACA01001CB1C9 /* ApplicationSettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettingsProvider.swift; sourceTree = "<group>"; };
+		3A44981426BACED6001CB1C9 /* MockLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationProvider.swift; sourceTree = "<group>"; };
+		3A44981726BAD4E4001CB1C9 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3A44981926BAD67E001CB1C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,7 @@
 		3A4497CE26BAA89A001CB1C9 = {
 			isa = PBXGroup;
 			children = (
+				3A44981926BAD67E001CB1C9 /* README.md */,
 				3A4497D926BAA89A001CB1C9 /* FollowMe */,
 				3A4497EB26BAA8A2001CB1C9 /* FollowMeTests */,
 				3A4497F626BAA8A3001CB1C9 /* FollowMeUITests */,
@@ -95,8 +109,11 @@
 		3A4497D926BAA89A001CB1C9 /* FollowMe */ = {
 			isa = PBXGroup;
 			children = (
-				3A4497DA26BAA89A001CB1C9 /* FollowMeApp.swift */,
-				3A4497DC26BAA89A001CB1C9 /* ContentView.swift */,
+				3A44981A26BAD719001CB1C9 /* Application */,
+				3A44981626BAD4CF001CB1C9 /* View Extensions  */,
+				3A44980926BAAB3C001CB1C9 /* Data Providers */,
+				3A44980626BAA8C0001CB1C9 /* ViewModels */,
+				3A44980526BAA8BB001CB1C9 /* Views */,
 				3A4497DE26BAA8A2001CB1C9 /* Assets.xcassets */,
 				3A4497E326BAA8A2001CB1C9 /* Info.plist */,
 				3A4497E026BAA8A2001CB1C9 /* Preview Content */,
@@ -115,6 +132,7 @@
 		3A4497EB26BAA8A2001CB1C9 /* FollowMeTests */ = {
 			isa = PBXGroup;
 			children = (
+				3A44981426BACED6001CB1C9 /* MockLocationProvider.swift */,
 				3A4497EC26BAA8A2001CB1C9 /* FollowMeTests.swift */,
 				3A4497EE26BAA8A2001CB1C9 /* Info.plist */,
 			);
@@ -128,6 +146,48 @@
 				3A4497F926BAA8A3001CB1C9 /* Info.plist */,
 			);
 			path = FollowMeUITests;
+			sourceTree = "<group>";
+		};
+		3A44980526BAA8BB001CB1C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A4497DC26BAA89A001CB1C9 /* MyMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A44980626BAA8C0001CB1C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A44980726BAA969001CB1C9 /* MyMapViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A44980926BAAB3C001CB1C9 /* Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3A44980A26BAAB58001CB1C9 /* LocationProviderType.swift */,
+				3A44980C26BAAC8E001CB1C9 /* CoreLocationProvider.swift */,
+				3A44981226BACA01001CB1C9 /* ApplicationSettingsProvider.swift */,
+			);
+			path = "Data Providers";
+			sourceTree = "<group>";
+		};
+		3A44981626BAD4CF001CB1C9 /* View Extensions  */ = {
+			isa = PBXGroup;
+			children = (
+				3A44981726BAD4E4001CB1C9 /* PrimaryButton.swift */,
+			);
+			path = "View Extensions ";
+			sourceTree = "<group>";
+		};
+		3A44981A26BAD719001CB1C9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3A4497DA26BAA89A001CB1C9 /* FollowMeApp.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4497DD26BAA89A001CB1C9 /* ContentView.swift in Sources */,
+				3A44981326BACA01001CB1C9 /* ApplicationSettingsProvider.swift in Sources */,
+				3A44980D26BAAC8E001CB1C9 /* CoreLocationProvider.swift in Sources */,
+				3A4497DD26BAA89A001CB1C9 /* MyMapView.swift in Sources */,
+				3A44980826BAA969001CB1C9 /* MyMapViewViewModel.swift in Sources */,
+				3A44981826BAD4E4001CB1C9 /* PrimaryButton.swift in Sources */,
 				3A4497DB26BAA89A001CB1C9 /* FollowMeApp.swift in Sources */,
+				3A44980B26BAAB58001CB1C9 /* LocationProviderType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4497ED26BAA8A2001CB1C9 /* FollowMeTests.swift in Sources */,
+				3A44981526BACED6001CB1C9 /* MockLocationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +493,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FollowMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.phychic-owl.FollowMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FollowMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.phychic-owl.FollowMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -6,28 +6,70 @@
 //
 
 import XCTest
+import CoreLocation
+import Combine
 @testable import FollowMe
 
 class FollowMeTests: XCTestCase {
+    private var sut: LocationProviderType!
+    private var cancelBag: Set<AnyCancellable> = []
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = MockLocationProvider(latitude: 0.0, longitude: 0.0)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testFetchLocation() throws {
+        let exp = expectation(description: "Mock location every seconds")
+        var testLocation: CLLocation?
+        
+        sut.fetchLocation().sink { location in
+            testLocation = location
+        }.store(in: &cancelBag)
+        
+        let result = XCTWaiter.wait(for: [exp], timeout: 5.0)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertNotNil(testLocation, "Location should not be nil")
+        } else {
+            XCTFail("Did not complete in 5 seconds")
         }
     }
-
+    
+    func testStopLocation() throws {
+        let exp = expectation(description: "Location should not be updated once we have stopped")
+        var testLocation: CLLocation?
+        
+        sut.fetchLocation().sink { location in
+            testLocation = location
+        }.store(in: &cancelBag)     // Start initial fetch 
+        sut.stopFetchingLocation()  // Stopped further udates
+        testLocation = nil          // Removed existing location
+        
+        let result = XCTWaiter.wait(for: [exp], timeout: 5.0)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertNil(testLocation, "Location should be nil")
+        } else {
+            XCTFail("Did not complete in 5 seconds")
+        }
+    }
+    
+    func testAuthorizationStatus() throws {
+        let exp = expectation(description: "authorizationStatus should be .denied")
+        var testStatus: CLAuthorizationStatus?
+        
+        sut = MockLocationProvider(authorizationStatus: .denied)
+        sut.fetchLocationAuthorizationStatus().sink { status in
+            testStatus = status
+        }.store(in: &cancelBag)
+        
+        let result = XCTWaiter.wait(for: [exp], timeout: 5.0)
+        if result == XCTWaiter.Result.timedOut {
+            XCTAssertEqual(CLAuthorizationStatus.denied, testStatus)
+        } else {
+            XCTFail("Did not complete in 5 seconds")
+        }
+    }
 }
