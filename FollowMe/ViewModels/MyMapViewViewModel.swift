@@ -94,7 +94,7 @@ final class MyMapViewViewModel: ObservableObject {
 
 // MARK: ApplicationSettingsProvider
 
-/// Conform to ApplicationSettingsProvider use the
+/// ApplicationSettingsProvider to open user's device settings
 extension MyMapViewViewModel: ApplicationSettingsProvider {
     
 }
