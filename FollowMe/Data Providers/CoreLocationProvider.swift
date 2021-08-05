@@ -28,7 +28,7 @@ final class CoreLocationProvider: NSObject, LocationProviderType {
     /**
      ### Overview
      This implementation uses`CLLocationManager` for providing `LocationProviderType` features
-     Using `kCLLocationAccuracyBestForNavigation` for this implementation as we're want accuracy for location tracking
+     Using `kCLLocationAccuracyBestForNavigation` for this implementation as we want accuracy for location tracking
      */
     override init() {
         self.locationManager = CLLocationManager()

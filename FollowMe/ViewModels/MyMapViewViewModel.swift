@@ -60,6 +60,8 @@ final class MyMapViewViewModel: ObservableObject {
     func stopLocationUpdates() {
         fetchLocationTask?.cancel()
         fetchAuthorizationStatusTask?.cancel()
+        fetchLocationTask = nil
+        fetchAuthorizationStatusTask = nil
         isLocationTrackingStarted = false
         userTrackingMode = .none
         showUserLocation = false
